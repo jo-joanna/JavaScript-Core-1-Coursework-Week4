@@ -8,7 +8,14 @@
 
 let pairsByIndexRaw = [[0, 3], [1, 2], [2, 1], null, [1], false, "whoops"];
 
-let pairsByIndex; // Complete this statement
+function checkIfArray(singleArray) {
+  /*this is a callback when you have primitive values, null, undefined in an array,
+you have to give an alternative*/
+  let fall = singleArray || [];
+  return fall.length == 2 ? fall : '';
+}
+
+let pairsByIndex=pairsByIndexRaw.filter(checkIfArray); // Complete this statement
 
 let students = ["Islam", "Lesley", "Harun", "Rukmini"];
 let mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
