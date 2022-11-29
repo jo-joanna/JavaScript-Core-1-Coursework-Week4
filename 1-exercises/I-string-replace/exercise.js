@@ -13,11 +13,11 @@
 let story =
   "I like dogs. One day I went to the park and I saw 10 dogs. It was a great day.";
 
-let result = story.replace("", "");
+let result = story.replace("I like dogs. One day I went to the park and I saw 10 dogs. It was a great day.", "I like cats. One night I went to the park and I saw 100000 cats. It was a brilliant night.");
 
 /* EXPECTED OUTPUT */
 
-const util = require("util");
+// const util = require("util");
 
 function test(test_name, actual, expected) {
   console.log("");
