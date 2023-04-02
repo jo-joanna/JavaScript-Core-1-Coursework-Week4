@@ -20,7 +20,7 @@
 function checkCodeIsThere(stringText) {
   let magicWord = "code";
   //edit code below
-  if (stringText) {
+  if (stringText.includes(magicWord)) {
     return stringText;
   } else {
     return "Not found";
@@ -64,7 +64,11 @@ function checkCodeIsThere(stringText) {
 
   Hint: Use the corresponding array method to split the array.
 */
-function getTransportModes() {}
+function getTransportModes(array) {
+  return array.map(array => (array.slice(1)))
+}
+// console.log('this is a 1st fn', getTransportModes([["Angel", "tube", "bus"], ['NY', "tube"]]))
+
 
 /*
   Implement the function isAccessibleByTransportMode that
@@ -81,7 +85,17 @@ function getTransportModes() {}
 
   Hint: Use the corresponding array method to decide if an element is included in an array.
 */
-function isAccessibleByTransportMode() {}
+function isAccessibleByTransportMode(array, transportMode) {
+  let tranMode = array.map(array => (array.slice(1)))
+  
+  for (let i = 0; i <= tranMode.length; i++) {
+    if (tranMode[i].includes(transportMode)) {
+      return true
+    } return false
+  } i++
+}
+
+console.log(isAccessibleByTransportMode([["Angel", "tube", "bus"],['NY', "boat"]], "tube"))
 
 /*
   Implement the function getLocationName that
@@ -93,7 +107,7 @@ function isAccessibleByTransportMode() {}
       e.g: "Tower Bridge"
 */
 function getLocationName() {}
-
+//working on
 /*
  We arrived at the final method. it won't take long if you use the previously implemented functions wisely.
 
