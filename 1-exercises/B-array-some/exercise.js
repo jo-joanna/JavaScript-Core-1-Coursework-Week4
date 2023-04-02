@@ -5,6 +5,7 @@
   - Add a check for null values, and if one exists, exit the program
   - Do not edit any of the existing code
 */
+import { exit } from "node:process";  
 
 let pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
 
@@ -15,10 +16,29 @@ let pairsByIndex = [[0, 3], [1, 2], [2, 1], null, [3, 0]];
 let students = ["Islam", "Lesley", "Harun", "Rukmini"];
 let mentors = ["Daniel", "Irina", "Mozafar", "Luke"];
 
+
+
 let pairs = pairsByIndex.map(function (indexes) {
   let student = students[indexes[0]];
   let mentor = mentors[indexes[1]];
   return [student, mentor];
 });
+
+console.log(student)
+
+
+// function isNull(pairs) {
+//   if (pairs === null){
+//     process.on(exit, (pairs) => {
+//       console.log(`About to exit with code: ${pairs}`);
+//     });
+//   }
+//   else {
+//     console.log(pairs);
+//   }
+// }
+
+// let isNotNull = pairs.some(isNull)
+
 
 console.log(pairs);
