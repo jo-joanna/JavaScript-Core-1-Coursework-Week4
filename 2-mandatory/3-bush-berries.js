@@ -23,7 +23,12 @@
 
 function isBushSafe(berryArray) {
   //Write your code here
-}
+  switch (berryArray.some( berry => berry != "pink")){
+    case true:
+      return "Toxic! Leave bush alone!";
+    case false: 
+      return "Bush is safe to eat from";
+}}
 
 /* ======= TESTS - DO NOT MODIFY ===== */
 
