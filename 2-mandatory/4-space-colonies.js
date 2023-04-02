@@ -16,7 +16,7 @@
 */
 
 function getSettlers(voyagers) {
-  return voyagers.filter(function (family, i) {
+  return voyagers.filter(function (family) {
     if (family.startsWith('A') && family.includes("family")) {
       return family;
     }
